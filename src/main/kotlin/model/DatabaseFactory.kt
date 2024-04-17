@@ -8,7 +8,7 @@ import org.jetbrains.exposed.sql.transactions.transaction
 object DatabaseFactory {
     fun init() {
         Database.connect(
-            url = "jdbc:sqlite:samples.db",
+            url = "jdbc:sqlite:database.db",
             driver = "org.sqlite.JDBC")
     transaction {
         SchemaUtils.create(Workspaces)
